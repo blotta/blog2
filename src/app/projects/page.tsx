@@ -4,7 +4,7 @@ import ProjectPreview from "../components/ProjectPreview";
 
 export default function ProjectsPage() {
   const projects = getProjectMetadata();
-  const projectsList = projects.sort(p => -p.priority).map((proj) => (
+  const projectsList = projects.sort((a,b) => b.priority - a.priority).map((proj) => (
     <ProjectPreview key={proj.slug} {...proj} />
   ))
 
