@@ -6,6 +6,7 @@ import getProjectMetadata from '@/app/components/getProjectMetadata';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ProjectLink } from '@/app/components/ProjectMetadata';
+import LBMarkdown from '@/app/components/LBMarkdown';
 
 const getProjectContent = (slug: string) => {
   const folder = "content/projects/";
@@ -29,30 +30,19 @@ export default function ProjectPage(props: any) {
     return <div>
         <h1 className='text-3xl text-green-500 text-center font-bold mb-6'>{proj.data.title}</h1>
 
-        <div className='grid grid-cols-3 gap-4 min-h-[300px]'>
+        <div className='flex flex-col gap-3 md:flex-row'>
 
-          <div className='relative w-full col-span-2'>
+          <div className='relative w-full md:w-2/3 min-h-[20rem] md:flex-2'>
             <Image className="object-contain" fill src={proj.data.image} alt={proj.data.title} />
           </div>
 
-          <div className='flex flex-col justify-center gap-2'>
+          <div className='w-full flex flex-row justify-center gap-2 md:flex-col md:flex-1 '>
             {proj.data.links.map((link: ProjectLink) => (
-              <Link key={link.url} target="_blank" className='p-2 text-center border bg-neutral-800' href={link.url}>{link.name}</Link>
+              <Link key={link.url} target="_blank" className='p-2  text-center border bg-neutral-800' href={link.url}>{link.name}</Link>
             ))}
           </div>
         </div>
 
-        <article className='prose
-          prose-neutral
-          lg:prose-xl
-          text-neutral-300
-          prose-pre:bg-slate-800
-          prose-pre:rounded
-          prose-code:text-neutral-300
-          prose-code:bg-slate-800
-          prose-a:text-neutral-300
-          hover:prose-a:text-green-500'>
-          <Markdown>{proj.content}</Markdown>
-        </article>
+        <LBMarkdown>{proj.content}</LBMarkdown>
     </div>
 }

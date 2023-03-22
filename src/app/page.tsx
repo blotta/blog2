@@ -16,13 +16,13 @@ export default function HomePage() {
         <LBLink target="_blank" href="https://github.com/blotta">
           <FiGithub />
         </LBLink>
-        <LBLink target="_blank" href="https://github.com/blotta">
+        <LBLink target="_blank" href="https://www.linkedin.com/in/lucas-blotta/">
           <FiLinkedin />
         </LBLink>
         <LBLink target="_blank" href="mailto://lucas@blotta.info">
           <FiMail />
         </LBLink>
-        <LBLink target="_blank" href="https://soundcloud.com/blotta-the-sample-man" className='hover:text-green-400 hover:scale-110'>
+        <LBLink target="_blank" href="https://soundcloud.com/blotta-the-sample-man">
           <FiHeadphones />
         </LBLink>
       </div>
