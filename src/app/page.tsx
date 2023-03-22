@@ -8,11 +8,11 @@ import LBLink from './components/LBLink'
 export default function HomePage() {
   return (
     <div className='flex flex-col items-center justify-center h-full gap-4'>
-      <h1 className="text-6xl font-bold">
+      <h1 className="text-4xl md:text-6xl font-bold">
         Lucas Blotta
       </h1>
-      <p className='text-2xl'>Developer | Musician</p>
-      <div className='text-xl flex flex-row justify-center gap-3'>
+      <p className='text-xl md:text-2xl'>Developer | Musician</p>
+      <div className='text-2xl md:text-xl flex flex-row justify-center gap-3'>
         <LBLink target="_blank" href="https://github.com/blotta">
           <FiGithub />
         </LBLink>

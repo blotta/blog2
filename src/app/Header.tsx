@@ -6,7 +6,7 @@ import LBLink from "./components/LBLink";
 
 export default function Header() {
   const pathname = usePathname();
-  console.log("pathname", pathname);
+  // console.log("pathname", pathname);
 
   return (
     <header className="bg-neutral-900 p-4 text-gray-400">

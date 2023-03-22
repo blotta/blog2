@@ -24,7 +24,7 @@ export default function ProjectPage(props: any) {
     const slug = props.params.slug;
     // const meta = getProjectMetadata().find(p => p.slug == slug);
     const proj = getProjectContent(slug);
-    console.log(proj);
+    // console.log(proj);
     
     return <div>
         <h1 className='text-3xl text-green-500 text-center font-bold mb-6'>{proj.data.title}</h1>

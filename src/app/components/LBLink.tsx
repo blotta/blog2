@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export default function LBLink(props: any) {
-  let cn = 'hover:text-green-400 hover:scale-110 ';
+  let cn = 'transition ease-in-out hover:text-green-400 hover:scale-110 hover:underline';
   if (props.className)
     cn += props.className;
 

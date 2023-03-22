@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import LBLink from "./LBLink";
 import { ProjectMetadata } from "./ProjectMetadata";
 
 const ProjectPreview = (props: ProjectMetadata) => {
@@ -13,9 +14,9 @@ const ProjectPreview = (props: ProjectMetadata) => {
 
       <div className="col-span-3">
 
-        <Link href={`/projects/${props.slug}`} >
-          <h2 className="font-bold text-green-400 hover:underline">{props.title}</h2>
-        </Link>
+        <LBLink href={`/projects/${props.slug}`} >
+          <h2 className="font-bold text-green-400">{props.title}</h2>
+        </LBLink>
         <div className="flex flex-row gap-2 flex-wrap">
           {props.tags.map(tag => (
             <span key={tag}>{tag}</span>
