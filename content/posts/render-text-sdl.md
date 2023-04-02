@@ -1,7 +1,10 @@
 ---
 title: "Render Text with SDL"
 date: 2020-11-28
-tags: sdl c gamedev
+tags:
+- sdl
+- c
+- gamedev
 ---
 A few months ago, I created a system to load a series of bytes and transform
 then into a SDL texture that could then be clipped and rendered as individual

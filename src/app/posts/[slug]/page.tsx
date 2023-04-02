@@ -2,6 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import getPostMetadata from '@/app/components/getPostMetadata';
 import LBMarkdown from '@/app/components/LBMarkdown';
+import TagList from '@/app/components/TagList';
 
 const getPostContent = (slug: string) => {
   const folder = "content/posts/";
@@ -22,6 +23,7 @@ export default function PostPage(props: any) {
     return <div>
         <h1 className='text-3xl text-center font-bold text-green-500'>{post.data.title}</h1>
         <p className='text-center'>{post.data.date.toLocaleDateString()}</p>
+        <TagList tags={post.data.tags} />
         <LBMarkdown>{post.content}</LBMarkdown>
     </div>
 }
